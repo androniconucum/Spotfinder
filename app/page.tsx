@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Sidenav from "@/app/sidebar/page"
 
 export default function Home() {
   return (
     <main>
-      <h1>Matt Testing | 11:49pm</h1>
+    <Sidenav />
     </main>
   );
 }
