@@ -20,7 +20,7 @@ export default function Sidebar() {
     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
     <div className="drawer-content mt-5 flex justify-center w-full sm:pr-6 gap-5 sm:gap-2 sm:px-5">
       {/* Page content here */}
-      <label htmlFor="my-drawer"> <GiHamburgerMenu className='h-6 w-6 cursor-pointer mr-3 mt-2'/> </label>
+      <label htmlFor="my-drawer"> <GiHamburgerMenu className='h-6 w-6 cursor-pointer mr-3 mt-2 sm:ml-2'/> </label>
       <div className='relative w-96 '>
       <input type="search" id="search-dropdown" className="block p-2.5 w-full z-100 text-sm text-gray-900 bg-gray-50 rounded-full border-s-[#aeaeae] border-s-2 border border-[#aeaeae] focus:ring-[#aeaeae] focus:border-[#aeaeae]" placeholder="Search..." required />
             <button type="submit" className="absolute top-0 end-0 p-2.5 text-sm font-medium h-[2.6rem] text-[#aeaeae] bg-white rounded-e-full border border-[#aeaeae] hover:bg-slate-200 focus:ring-1 focus:outline-none focus:ring-[#aeaeae]">
