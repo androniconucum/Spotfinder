@@ -12,11 +12,10 @@ export default function Home() {
     },
   });
 
-
   return (
     <div className="p-8">
-      <div className='text-white'>{session?.data?.user?.email }</div>
-      <button className='text-white' onClick={() => signOut()}>Logout</button>
+      <div className='text-black'>{session?.data?.user?.email }</div>
+      <button className='text-black' onClick={() => signOut()}>Logout</button>
     </div>
   )
 }
