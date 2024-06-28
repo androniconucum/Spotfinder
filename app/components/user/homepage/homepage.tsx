@@ -51,15 +51,15 @@ export default function Sidebar() {
         <p className='mt-3 ml-3 text-2xl sm:text-[.8rem] sm:ml-1 font-bold '>SPOTFINDER</p>
         </div>
         {/* Sidebar content here */}
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold'> <Image src={HomeIcon} width={25} height={25} alt='HomeIcon' /> Home</a></li>
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={ApartmentIcon} width={25} height={25} alt='HomeIcon' />Apartments</a></li>
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={OwnershipIcon} width={25} height={25} alt='HomeIcon' />Ownership</a></li>
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={AboutIcon} width={25} height={25} alt='HomeIcon' />About Us</a></li>
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={ContactIcon} width={25} height={25} alt='HomeIcon' />Contact Us</a></li>
+        <li><Link href={"/Home"} className='text-[1.3rem] sm:text-[.9rem] font-semibold'> <Image src={HomeIcon} width={25} height={25} alt='HomeIcon' /> Home</Link></li>
+        <li><Link href={"/Apartments"} className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={ApartmentIcon} width={25} height={25} alt='HomeIcon' />Apartments</Link></li>
+        <li><Link href={"/Ownership"} className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={OwnershipIcon} width={25} height={25} alt='HomeIcon' />Ownership</Link></li>
+        <li><Link href={"/Aboutus"} className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={AboutIcon} width={25} height={25} alt='HomeIcon' />About Us</Link></li>
+        <li><Link href={"/Contactus"} className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-8'><Image src={ContactIcon} width={25} height={25} alt='HomeIcon' />Contact Us</Link></li>
         </div>
-        <div className='pt-0 pb-0 mb-0 2xl:mb-10 xl:mb-7 lg:mb-7 md:mb-7 sm:mb-0 sm:'>
-        <div className="w-full h-px mx-auto py-0.5 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-2'><Image src={SettingsIcon} width={25} height={25} alt='HomeIcon' />Settings</a></li>
+        <div className='pt-0 pb-0 mb-0 2xl:pb-1 xl:mb-7 lg:mb-7 md:mb-7 sm:mb-0'>
+        <div className="w-full h-px mx-auto py-0.5 bg-gradient-to-r from-transparent via-white to-transparent mb-5"></div>
+        <li><Link href={"/Settings"} className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-2'><Image src={SettingsIcon} width={25} height={25} alt='HomeIcon' />Settings</Link ></li>
         <li onClick={()=>signOut()} ><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-3'><Image src={LogOutIcon} width={25} height={25} alt='HomeIcon' />Log Out</a></li>
         </div>
       </ul>
