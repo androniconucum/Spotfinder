@@ -11,9 +11,14 @@ import GroupIcon from "@/public/Mask group.svg"
 import NotifIcon from "@/public/Group 68.svg"
 import UserIcon from "@/public/image 13.svg"
 import Link from 'next/link'
+import { useSession } from 'next-auth/react';
 
 
 export default function Sidebar() {
+  const session = useSession({
+    required: true
+  });
+
   return (
     <div className="drawer max-w-full  flex justify-center ">
       <div className='max-w-2xl bg-white xl:max-w-5xl lg:max-w-4xl lg:px-5 md:max-w-[50rem] md:px-5 sm:max-w-[27rem] pb-3 rounded-b-3xl 2xl:px-5 sm:rounded-none xl:px-5'>
@@ -49,6 +54,7 @@ export default function Sidebar() {
         <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold'><Image src={ContactIcon} width={25} height={25} alt='HomeIcon' />Contact Us</a></li>
       </ul>
       </div>
+      <div>{session?.data?.user?.email }</div>
     </div>
   </div>
   )
