@@ -8,8 +8,8 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full bg-gray-900">
-      <body className="h-full bg-[#efefef]">
+    <html lang="en" className="h-full w-full  bg-[#efefef]">
+      <body>
       <Nav />
       <SessionProvider>
         {children}
