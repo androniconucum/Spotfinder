@@ -1,4 +1,4 @@
-import Homepage from "./homepage"
+import Homepage from "./homepage/homepage"
 
 export default function User(){
     return(

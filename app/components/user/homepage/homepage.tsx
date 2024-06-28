@@ -13,7 +13,7 @@ import UserIcon from "@/public/image 13.svg"
 import SettingsIcon from "@/public/Settings.svg"
 import LogOutIcon from "@/public/Log Out.svg"
 import Link from 'next/link'
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 
 
 export default function Sidebar() {
@@ -60,12 +60,11 @@ export default function Sidebar() {
         <div className='pt-0 pb-0 mb-0 2xl:mb-10 xl:mb-7 lg:mb-7 md:mb-7 sm:mb-0 sm:'>
         <div className="w-full h-px mx-auto py-0.5 bg-gradient-to-r from-transparent via-white to-transparent"></div>
         <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-2'><Image src={SettingsIcon} width={25} height={25} alt='HomeIcon' />Settings</a></li>
-        <li><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-3'><Image src={LogOutIcon} width={25} height={25} alt='HomeIcon' />Log Out</a></li>
+        <li onClick={()=>signOut()} ><a className='text-[1.3rem] sm:text-[.9rem] font-semibold mt-3'><Image src={LogOutIcon} width={25} height={25} alt='HomeIcon' />Log Out</a></li>
         </div>
       </ul>
         </div>
       </div>
-      <div>{session?.data?.user?.email }</div>
     </div>
   </div>
   )
